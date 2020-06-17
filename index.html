@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome/4.7/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/font-awesome/4.7/css/font-awesome-animation.min.css" rel="stylesheet">
+<link href="css/iconfont/style.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Training ears</title>
+</head>
+<body>
+
+<div class="header">
+	<div class="nav">
+		<button class="btn btn-default btn-lg tabHead" target="listenPractice"><i class="fa fa-circle"></i>&nbsp;LISTEN训练</button>
+		<button class="btn btn-default btn-lg tabHead" target="guitarPractice"><i class="fa"></i>&nbsp;GUITAR音阶训练</button>
+		<button class="btn btn-default btn-lg tabHead" target="staffPractice"><i class="fa"></i>&nbsp;STAFF音阶训练</button>
+	</div>
+	<div class="menu"><button id="btnSetting" class="btn btn-default btn-lg"><i class="fa fa-bars"></i></button></div>
+</div>
+
+<div class="body">
+  
+	<div id="listenPractice" class="tabBody">
+		<div class="audio">
+			<div class="scaleLabel gray">C4</div>
+			<audio src="piano/C4.wav" controls="controls" style="width:100%;">您的浏览器不支持 audio 标签，请使用IE11及以上版本，或者chrome70以上版本</audio>
+			<div class="scaleLabel">
+				<span id="answer"></span>
+				<button id="showAnswer" class="btn btn-default btn-lg hidden" title="显示答案"><i class="fa fa-question"></i></button>
+			</div>
+			<audio id="testAudio" src="piano/C4.wav" controls="controls" style="width:100%;">
+			</audio>
+			<div class="startButton">
+				<button id="startTest" class="btn btn-default btn-lg" title="开始测试"><i class="fa fa-play"></i>&nbsp;<span>开始测试</span></button>
+			</div>
+			<div id="testState" class="testState">
+			</div>
+		</div>
+
+		<div class="scaleButtons">
+		</div>
+	</div>
+
+	<div id="guitarPractice" class="tabBody">
+	    <div class="pitchLabel gray">C调</div>
+		<div class="guitarFingerPlateWrapper">
+			<div class="guitarFingerPlate" code="C">
+			    <div class="guitarRank" rank-index="0"></div>
+				<div class="guitarRank" rank-index="1"></div>
+				<div class="guitarRank" rank-index="2"></div>
+				<div class="guitarRank" rank-index="3"></div>
+				<div class="guitarRank" rank-index="4"></div>
+				<div class="guitarRank" rank-index="5"></div>
+				<div class="guitarRank" rank-index="6"></div>
+				<div class="guitarRank" rank-index="7"></div>
+				<div class="guitarRank" rank-index="8"></div>
+				<div class="guitarRank" rank-index="9"></div>
+				<div class="guitarRank" rank-index="10"></div>
+				<div class="guitarRank" rank-index="11"></div>
+				<div class="guitarRank" rank-index="12"></div>
+
+				<div class="guitarString" string-index="1"></div>
+				<div class="guitarString" string-index="2"></div>
+				<div class="guitarString" string-index="3"></div>
+				<div class="guitarString" string-index="4"></div>
+				<div class="guitarString" string-index="5"></div>
+				<div class="guitarString" string-index="6"></div>
+
+				<div class="guitarRankDot" rank-index="3">
+					<i class="fa fa-circle"></i>
+				</div>
+				<div class="guitarRankDot" rank-index="5">
+					<i class="fa fa-circle"></i>
+				</div>
+				<div class="guitarRankDot" rank-index="7">
+					<i class="fa fa-circle"></i>
+				</div>
+				<div class="guitarRankDot" rank-index="9">
+					<i class="fa fa-circle"></i>
+				</div>
+				<div class="guitarRankDot" rank-index="12">
+					<i class="fa fa-circle"></i>
+					<i class="fa fa-circle"></i>
+				</div>
+			</div>
+		</div>
+		<div id="answerForGuitar">
+			请找出所有音名是 <div class="musicalAlphabet lg">&nbsp;</div> 的音阶
+		</div>
+		<div class="selectedScales">
+		</div>
+		<div class="startButton">
+		    <div class="btn-group">
+				<button id="startTestForGuitar" class="btn btn-default btn-lg" title="开始测试"><i class="fa fa-play"></i>&nbsp;<span>开始测试</span></button>
+				<button id="showAnswerForGuitar" class="btn btn-default btn-lg" title="显示答案"><i class="fa fa-question"></i></button>
+			</div>
+		</div>
+	</div>
+
+	<div id="staffPractice" class="tabBody">
+		<div class="staffWrapper">
+		    <div class="staffLineHigh" line='5'></div>
+			<div class="staffLineHigh" line='4'></div>
+			<div class="staffLineHigh" line='3'></div>
+			<div class="staffLineHigh" line='2'></div>
+			<div class="staffLineHigh" line='1'></div>
+
+			<div class="staffLineCenter"></div>
+
+			<div class="staffLineLow" line='5'></div>
+			<div class="staffLineLow" line='4'></div>
+			<div class="staffLineLow" line='3'></div>
+			<div class="staffLineLow" line='2'></div>
+			<div class="staffLineLow" line='1'></div>
+
+			<div class="highIcon"><i class="icon-gaoyinpuhao"></i></div>
+			<div class="lowIcon"><i class="icon-diyinpuhao"></i></div>
+		</div>
+
+		<div class="musicalInstrumentWrapper">
+		</div>
+	</div>
+
+</div>
+
+<div class="settingModal hidden">
+    <div tab-link-id="listenPractice" class="row tabLink actived">
+	    <div class="col-lg-4 col-md-4 col-sm-2"></div>
+	    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 center white">
+		    <div class="row line">
+	            <label>音阶范围</label>
+			</div>
+			<div class="row line">
+				<div class="col-xs-6 pRight">
+					<select name="startScale" class="form-control input-md select">
+					</select>
+				</div>
+				<div class="col-xs-6 pLeft">
+					<select name="endScale" class="form-control input-md select">
+					</select>
+				</div>
+			</div>
+			<div class="row line">
+				<div class="col-xs-12">
+				    <label><input type="checkbox" name="fallingTone" class="middle"/>&nbsp;不使用降调(b)</label>
+				</div>
+			</div>
+			<div class="row line">
+				<div class="col-xs-12">
+					<button type="button" class="btn btn-primary btn-lg" id="btnSave">确定</button>
+					<button type="button" class="btn btn-default btn-lg" name="btnCancel">取消</button>
+				</div>
+			</div>
+        </div>
+		<div class="col-lg-4 col-md-4 col-sm-2"></div>
+    </div>
+	<div tab-link-id="guitarPractice" class="row tabLink">
+	    <div class="col-lg-4 col-md-4 col-sm-2"></div>
+	    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 center white">
+		    <div class="row line">
+	            <label>调试选择</label>
+			</div>
+			<div class="row line">
+				<div class="col-xs-12">
+					<select name="pitch" class="form-control input-md select">
+					</select>
+				</div>
+			</div>
+			<div class="row line">
+			    <div class="col-xs-4">
+				    <label><input type="radio" name="guitarPracMode" class="middle" value="1" checked/>&nbsp;手动训练</label>
+				</div>
+				<div class="col-xs-4">
+				    <label><input type="radio" name="guitarPracMode" class="middle" value="2"/>&nbsp;自动训练</label>
+				</div>
+				<div class="col-xs-4">
+				    <label><input type="checkbox" name="musicalAlphabet" class="middle"/>&nbsp;显示音阶</label>
+				</div>
+			</div>
+			<div class="row line">
+				<div class="col-xs-12">
+					<button type="button" class="btn btn-primary btn-lg" id="btnSaveForGuitar">确定</button>
+					<button type="button" class="btn btn-default btn-lg" name="btnCancel">取消</button>
+				</div>
+			</div>
+        </div>
+		<div class="col-lg-4 col-md-4 col-sm-2"></div>
+	</div>
+	<div tab-link-id="staffPractice" class="row tabLink">
+	</div>
+</div>
+
+<div class="scaleSelect hidden">
+    <div class="musicalAlphabet C"><a>C</a></div>
+	<div class="musicalAlphabet D"><a>D</a></div>
+	<div class="musicalAlphabet E"><a>E</a></div>
+	<div class="musicalAlphabet F"><a>F</a></div>
+	<div class="musicalAlphabet G"><a>G</a></div>
+	<div class="musicalAlphabet A"><a>A</a></div>
+	<div class="musicalAlphabet B"><a>B</a></div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,581 @@
+.header{
+	display:inline-block;
+	height:65px;
+	line-height:65px;
+	border-bottom:1px solid #ddd;
+	width:100%;
+	padding:0px 10px;
+	box-sizing:border-box;
+}
+
+.header>.menu{
+	display:inline-block;
+	float:right;
+	font-size:18px;
+	cursor:default;
+}
+
+.body{
+    overflow-x:hidden;
+	overflow-y:auto;
+	box-sizing:border-box;
+}
+
+.nav{
+	display:inline-block;
+	float:left;
+	font-size:18px;
+	cursor:default;
+}
+
+.tabHead.actived>i{
+    color:#2cc87e;
+}
+
+.tabBody{
+    display:none;
+}
+
+.tabBody.actived{
+    display:block;
+	width:100%;
+	height:100%;
+}
+
+.tabLink{
+    display:none;
+}
+
+.tabLink.actived{
+    display:block;
+}
+
+.audio{
+	display:inline-block;
+	width:100%;
+	text-align:center;
+	padding:5px 15px;
+	box-sizing:border-box;
+}
+
+.audio>.scaleLabel{
+	display:block;
+	font-size:38px;
+	font-weight:bold;
+	color:#2cc87e;
+	height:60px;
+	padding:0px 0px 10px 0px;
+}
+
+.audio>.scaleLabel.gray{
+	color:#bbb;
+}
+
+.scaleButtons{
+	display:inline-block;
+	width:100%;
+	padding:5px 15px;
+	text-align:center;
+	border-top:1px solid #ddd;
+	padding:10px 0px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	box-sizing:border-box;
+}
+
+.scaleButtons>button{
+	margin:0px 20px 20px 0px;
+	width:50px;
+
+}
+
+.startButton{
+	padding:10px 0px;
+	text-align:center;
+}
+
+#showAnswer{
+	font-size:18px;
+	color:red;
+}
+
+.btn.hidden{
+	display:none;
+}
+
+.settingModal{
+    position:fixed;
+	left:0;
+	top:0;
+    width:100%;
+	height:100%;
+	background-color:#bbb;
+	opacity:1;
+}
+
+.settingModal.hidden{
+    display:none;
+}
+
+.center.white{
+    text-align:center;
+	background-color:#fff;
+	padding:10px 25px;
+	opacity:1;
+}
+
+.row.line{
+    margin-bottom:25px!important;
+}
+
+label{
+    font-size:16px;
+}
+
+input[type=checkbox].middle{
+    margin-top:0px;
+	vertical-align:middle;
+	width:16px;
+	height:16px;
+}
+
+.select{
+    font-size:16px;
+	font-weight:bold;
+}
+
+.col-xs-6.pLeft{
+    padding-left:5px;
+}
+
+.col-xs-6.pRight{
+    padding-right:5px;
+}
+
+.testState{
+    font-size:38px;
+	padding:5px 0px;
+	margin:10px 0px 0px 0px;
+	height:68px;
+}
+
+.testState.right{
+	color:#2cc87e;
+}
+
+.testState.wrong{
+	color:red;
+}
+
+.guitarFingerPlateWrapper{
+    padding:30px;
+}
+
+.guitarFingerPlate{
+    position:relative;
+    width:95%;
+	height:173.5px;
+	border-top:1px solid #ddd;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	border-left:5px solid #ddd;
+	background-color:gray;
+}
+
+.guitarFingerPlate>.guitarString{
+    position:absolute;
+	width:100%;
+	left:0px;
+	background-color:#cada6e;
+}
+
+.guitarFingerPlate>.guitarString[string-index="1"]{
+	top:10px;
+    height:1px;
+}
+
+.guitarFingerPlate>.guitarString[string-index="2"]{
+	top:40px;
+    height:1.5px;
+}
+
+.guitarFingerPlate>.guitarString[string-index="3"]{
+	top:70px;
+    height:2px;
+}
+
+.guitarFingerPlate>.guitarString[string-index="4"]{
+	top:100px;
+    height:2.5px;
+}
+
+.guitarFingerPlate>.guitarString[string-index="5"]{
+	top:130px;
+    height:3px;
+}
+
+.guitarFingerPlate>.guitarString[string-index="6"]{
+	top:160px;
+    height:4px;
+}
+
+.guitarFingerPlate>.guitarRank{
+    position:absolute;
+	height:100%;
+	top:0;
+	background-color:#bbb;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="0"]{
+    left:0;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="1"]{
+    left:8%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="2"]{
+    left:16%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="3"]{
+    left:24%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="4"]{
+    left:32%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="5"]{
+    left:40%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="6"]{
+    left:48%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="7"]{
+    left:56%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="8"]{
+    left:64%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="9"]{
+    left:72%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="10"]{
+    left:80%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="11"]{
+    left:88%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRank[rank-index="12"]{
+    left:96%;
+	width:2px;
+}
+
+.guitarFingerPlate>.guitarRankDot{
+    position:absolute;
+	font-size:18px;
+	color:#fff;
+}
+
+.guitarFingerPlate>.guitarRankDot>i{
+    display:block;
+}
+
+.guitarFingerPlate>.guitarRankDot>i:nth-child(2){
+    margin-top:40px;
+}
+
+.guitarFingerPlate>.guitarRankDot[rank-index="3"]{
+    left:20%;
+	top:78px;
+}
+
+.guitarFingerPlate>.guitarRankDot[rank-index="5"]{
+    left:36%;
+	top:78px;
+}
+
+.guitarFingerPlate>.guitarRankDot[rank-index="7"]{
+    left:52%;
+	top:78px;
+}
+
+.guitarFingerPlate>.guitarRankDot[rank-index="9"]{
+    left:68%;
+	top:78px;
+}
+
+.guitarFingerPlate>.guitarRankDot[rank-index="12"]{
+    left:92%;
+	top:49px;
+}
+
+.musicalAlphabet{
+    display:inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.guitarFingerPlate>.musicalAlphabet{
+    position: absolute;
+	display: block;
+}
+
+.musicalAlphabet.C{
+    background-color: #5b9a7f;
+	border: 1px solid #5b9a7f;
+}
+
+.musicalAlphabet.D{
+    background-color: #b470b7;
+	border: 1px solid #b470b7;
+}
+
+.musicalAlphabet.E{
+    background-color: #7a6ea7;
+	border: 1px solid #7a6ea7;
+}
+
+.musicalAlphabet.F{
+    background-color: #d48327;
+	border: 1px solid #d48327;
+}
+
+.musicalAlphabet.G{
+    background-color: #2f3b65;
+	border: 1px solid #2f3b65;
+}
+
+.musicalAlphabet.A{
+    background-color: #c31549;
+	border: 1px solid #c31549;
+}
+
+.musicalAlphabet.B{
+    background-color: #f54c1f;
+	border: 1px solid #f54c1f;
+}
+
+.musicalAlphabet.lg{
+    font-size: 24px;
+	width: 32px;
+    height: 32px;
+}
+
+.pitchLabel{
+    display:block;
+	font-size:38px;
+	font-weight:bold;
+	color:#2cc87e;
+	height:60px;
+	padding:0px 0px 10px 0px;
+	text-align:center;
+}
+
+.scaleSelect{
+    position:fixed;
+	z-index:800;
+	background-color:#fff;
+	border:1px solid #ddd;
+	width:34px;
+	padding:0px 5px 5px 5px;
+	border-radius:5px;
+}
+
+.scaleSelect.hidden{
+    display:none;
+}
+
+.scaleSelect>.musicalAlphabet{
+    margin-top:5px;
+}
+
+.scaleSelect>.musicalAlphabet>a{
+    color:#fff;
+	text-decoration:none;
+	cursor:default;
+}
+
+.scaleSelect>.musicalAlphabet>a:hover{
+    color:gray;
+}
+
+.errorScaleSelect,
+.rightScaleSelect{
+    position:fixed;
+	z-index:800;
+	font-size:32px;
+}
+
+.errorScaleSelect{
+    color:red;
+}
+
+.rightScaleSelect{
+    color:#d5f250;
+}
+
+#answerForGuitar{
+    display:block;
+    font-size:22px;
+	font-weight:bold;
+	color:#aaa;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.selectedScales{
+    padding:0px 10px;
+	margin-bottom:10px;
+	text-align:center;
+}
+
+.selectedScales>.sscale{
+    display:inline-block;
+    width:42px;
+	height:42px;
+	border:1px solid #ddd;
+	border-right:0px;
+	padding-top:5px;
+	vertical-align:middle;
+}
+
+.selectedScales>.sscale:first-child{
+    border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+
+.selectedScales>.sscale:last-child{
+    border-right:1px solid #ddd;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+
+.selectedScales>.sscale>i{
+    font-size:28px;
+	color:#0ed20e;
+}
+
+.selectedScales>.sscale>i.hidden{
+    display:none;
+}
+
+.staffWrapper{
+    position:relative;
+    padding:10px 20px;
+}
+
+.staffWrapper>.staffLineHigh,
+.staffWrapper>.staffLineLow{
+    width:100%;
+    height: 1px;
+	background-color:#000;
+	margin-bottom:25px;
+}
+
+.staffWrapper>.staffLineCenter{
+    width:100%;
+    height: 1px;
+	background-color:#ddd;
+    margin:40px 0px;
+}
+
+.staffWrapper>.musicNote{
+    position:absolute;
+	left:0px;
+	top:0px;
+    width:16px;
+	height:16px;
+	background-color:#000;
+	border:1px solid #000;
+	border-top-left-radius:12px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:12px;
+}
+
+.staffWrapper>.highIcon{
+    position:absolute;
+	font-size:116px;
+}
+
+.staffWrapper>.lowIcon{
+    position:absolute;
+	font-size:98px;
+}
+
+.piano{
+    position:relative;
+    padding:10px 20px;
+	text-align:center;
+	font-size: 0;
+}
+
+.piano>.whiteKey{
+    position:relative;
+    display:inline-block;
+    width:40px;
+	height:150px;
+	background-color:#fff;
+	border:1px solid #ddd;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.piano>.blackKey{
+    display:inline-block;
+    position:absolute;
+	z-index:100;
+    width:30px;
+	height:100px;
+	background-color:#000;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.piano>.whiteKey>.musicalAlphabet{
+    position:absolute;
+	bottom:5px;
+	left:5px;
+	width: 28px;
+    height: 28px;
+	font-size: 14px;
+	padding-top:2px;
+}
+
+.piano>.blackKey>.musicalAlphabet{
+    position:absolute;
+	bottom:5px;
+	left:1px;
+	width: 28px;
+    height: 28px;
+	font-size: 14px;
+	padding-top:2px;
+}
